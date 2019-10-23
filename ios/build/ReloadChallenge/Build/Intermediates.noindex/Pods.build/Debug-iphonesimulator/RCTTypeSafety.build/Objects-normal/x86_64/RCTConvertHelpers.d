@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/matheustimbo/Documents/ReloadChallenge/node_modules/react-native/Libraries/TypeSafety/RCTConvertHelpers.mm \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Target\ Support\ Files/RCTTypeSafety/RCTTypeSafety-prefix.pch \
+  /Users/matheustimbo/Documents/ReloadChallenge/node_modules/react-native/Libraries/TypeSafety/RCTConvertHelpers.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyVector.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyIterator.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Optional.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Portability.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/CPortability.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Traits.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Utility.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/CppAttributes.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h

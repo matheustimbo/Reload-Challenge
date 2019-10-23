@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "540793693095",
+    "firebase_url": "https://reload-challenge.firebaseio.com",
+    "project_id": "reload-challenge",
+    "storage_bucket": "reload-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540793693095:android:a57339698e1e9c75b14c82",
+        "android_client_info": {
+          "package_name": "com.reloadchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540793693095-rrn8sp60rn9ee62kifnasl0u6r4vciu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSasHssvR-kvNdvV4riBxlGyuhFfRQal4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540793693095-rrn8sp60rn9ee62kifnasl0u6r4vciu6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

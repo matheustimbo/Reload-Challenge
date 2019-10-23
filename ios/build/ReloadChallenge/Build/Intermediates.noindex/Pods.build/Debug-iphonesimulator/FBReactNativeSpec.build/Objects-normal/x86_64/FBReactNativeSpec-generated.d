@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/matheustimbo/Documents/ReloadChallenge/node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec-generated.mm \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Target\ Support\ Files/FBReactNativeSpec/FBReactNativeSpec-prefix.pch \
+  /Users/matheustimbo/Documents/ReloadChallenge/node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/RCTRequired/RCTRequired/RCTRequired.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTConvertHelpers.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyVector.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/FBLazyVector/FBLazyVector/FBLazyIterator.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Optional.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Portability.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/portability/Config.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/CPortability.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Traits.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/Utility.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/lang/Exception.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Folly/folly/CppAttributes.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/RCTTypeSafety/RCTTypeSafety/RCTTypedModuleConstants.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTPackagerConnection.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTCxxConvert.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTManagedPointer.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/ReactCommon/ReactCommon/RCTTurboModule.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTModuleMethod.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTBridgeMethod.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-Core/React/RCTNullability.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/ReactCommon/ReactCommon/JSCallInvoker.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/ReactCommon/ReactCommon/TurboModule.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-jsi/jsi/jsi.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-jsi/jsi/jsi-inl.h \
+  /Users/matheustimbo/Documents/ReloadChallenge/ios/Pods/Headers/Public/React-cxxreact/cxxreact/MessageQueueThread.h
