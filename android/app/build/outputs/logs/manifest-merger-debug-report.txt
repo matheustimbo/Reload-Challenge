@@ -5,6 +5,7 @@ INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/mai
 INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
 MERGED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-linear-gradient] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-firebase] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-auth:17.0.0] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/037a4fa501afdd9d4040b7386a7c7d0a/AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/67786f7c6c9a30a89b1631480b611701/AndroidManifest.xml:17:1-22:12
@@ -17,6 +18,7 @@ MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/matheustimb
 MERGED from [com.google.android.gms:play-services-base:16.1.0] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/40d619e37faa92367c95710a9b4cdd77/AndroidManifest.xml:17:1-29:12
 MERGED from [:react-native-gesture-handler] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-svg] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.61.2] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/3fee8bc0e2e1bdd73375b98cdc46deda/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/c33e1caab980ab016140df6ce7237475/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-common:17.0.0] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/97b48ff4e8160b67cde05e9517e118be/AndroidManifest.xml:2:1-19:12
@@ -211,6 +213,8 @@ uses-sdk
 INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/matheustimbo/Documents/Reload-Challenge/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-linear-gradient] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-firebase/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-auth:17.0.0] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/037a4fa501afdd9d4040b7386a7c7d0a/AndroidManifest.xml:21:5-44
@@ -235,6 +239,8 @@ MERGED from [:react-native-gesture-handler] /Users/matheustimbo/Documents/Reload
 MERGED from [:react-native-gesture-handler] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/matheustimbo/Documents/Reload-Challenge/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.61.2] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/3fee8bc0e2e1bdd73375b98cdc46deda/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.2] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/3fee8bc0e2e1bdd73375b98cdc46deda/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /Users/matheustimbo/.gradle/caches/transforms-2/files-2.1/c33e1caab980ab016140df6ce7237475/AndroidManifest.xml:7:5-9:41

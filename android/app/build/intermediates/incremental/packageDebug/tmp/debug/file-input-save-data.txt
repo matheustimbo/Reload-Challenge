@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 22 22:58:34 BRT 2019
+#Wed Oct 23 11:02:27 BRT 2019
 56.path=lib/armeabi-v7a/libnative-imagetranscoder.so
 5.base=/Users/matheustimbo/Documents/Reload-Challenge/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/Users/matheustimbo/Documents/Reload-Challenge/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

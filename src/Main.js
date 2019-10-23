@@ -1,51 +1,50 @@
 // Main.js
 import React from 'react'
-import { StyleSheet, Platform, Image, Text, View, TouchableOpacity} from 'react-native'
+import { StyleSheet, StatusBar, View, SafeAreaView, Dimensions} from 'react-native'
 import firebase from 'react-native-firebase'
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import { TabView, SceneMap } from 'react-native-tab-view';
+import Tab1 from "./Tab1"
+import Tab2 from "./Tab2"
 
 export default class Main extends React.Component {
     
     constructor(){
         super();
         this.state = {
-            currentUser: null
+            index: 0,
+            routes: [
+                { key: 'first', title: 'City' },
+                { key: 'second', title: 'List' },
+            ],
         }
     }
 
     componentDidMount(){
-        const { currentUser } = firebase.auth()
-        this.setState({ currentUser })
+        
     }
 
+
     render() {
-        const { currentUser } = this.state
         return (
-            <View style={styles.container}>
-                <Text>
-                Hi {currentUser && currentUser.email}!
-                </Text>
-                <TouchableOpacity
-                    onPress={()=>{
-                        firebase.auth().signOut().then(function() {
-                            // Sign-out successful.
-                            this.props.navigation.navigate('Loading')
-                        }).catch(function(error) {
-                            // An error happened.
-                            console.log("error:")
-                            console.log(error)
-                        });
-                    }}
-                >
-                    <Text>Logout</Text>
-                </TouchableOpacity>
+            <View style={{flex: 1, paddingTop: getStatusBarHeight(), backgroundColor: "#3995F9"}}>
+                <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0,0,0,0.0)"/>
+                <TabView
+                    navigationState={this.state}
+                    renderScene={SceneMap({
+                    first: Tab1,
+                    second: Tab2,
+                    })}
+                    onIndexChange={index => this.setState({ index })}
+                    initialLayout={{ width: Dimensions.get('window').width }}
+                />
             </View>
+            
         )
     }
 }
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+  scene: {
+      flex: 1
   }
 })

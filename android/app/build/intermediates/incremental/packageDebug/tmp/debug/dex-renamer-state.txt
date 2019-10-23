@@ -1,4 +1,4 @@
-#Tue Oct 22 22:58:33 BRT 2019
+#Wed Oct 23 11:02:26 BRT 2019
 base.0=/Users/matheustimbo/Documents/Reload-Challenge/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

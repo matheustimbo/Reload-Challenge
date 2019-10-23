@@ -18,8 +18,12 @@ import com.reloadchallenge.R;
 import io.invertase.firebase.RNFirebasePackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 
 public class PackageList {
   private Application application;
@@ -67,7 +71,9 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new RNFirebasePackage(),
       new RNGestureHandlerPackage(),
-      new ReanimatedPackage()
+      new LinearGradientPackage(),
+      new ReanimatedPackage(),
+      new SvgPackage()
     ));
   }
 }

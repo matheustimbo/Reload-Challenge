@@ -33,7 +33,21 @@ var navigator = createAnimatedSwitchNavigator(
     }
   },
   {
-    initialRouteName: 'Loading'
+    initialRouteName: 'Loading',
+    transition: (
+      <Transition.Together>
+        <Transition.Out
+          type="slide-left"
+          durationMs={400}
+          interpolation="easeIn"
+        />
+        <Transition.In
+          type="slide-right"
+          durationMs={400}
+          interpolation="easeIn"
+        />
+      </Transition.Together>
+    ),
   }
 );
 

@@ -37,6 +37,10 @@ target 'ReloadChallenge' do
   pod 'Firebase/Core', '~> 6.3.0'
   pod 'Firebase/Auth', '~> 6.3.0'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'ReloadChallengeTests' do
     inherit! :search_paths
     # Pods for testing
