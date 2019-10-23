@@ -13,8 +13,7 @@ export default class Loading extends React.Component {
     render() {
         return (
         <View style={styles.container}>
-            <TravelIcon width="120" height="120"/>
-            <ActivityIndicator size="large" />
+            <TravelIcon width="240" height="240"/>
         </View>
         )
     }

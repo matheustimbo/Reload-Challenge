@@ -41,7 +41,28 @@ export default class Loading extends React.Component {
         super();
         this.state = {
             activeSections: [],
+            cities: []
         };
+        this.logout = this.logout.bind(this);
+    }
+
+    componentDidMount(){
+        setTimeout(()=>{ 
+            this.setState({
+                cities: CITIES
+            }) 
+        }, 600);
+    }
+
+    logout(){
+        firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+            this.props.navigation.navigate('Loading')
+        }).catch(function(error) {
+            // An error happened.
+            console.log("error:")
+            console.log(error)
+        });
     }
 
 
@@ -64,6 +85,7 @@ export default class Loading extends React.Component {
                         <Text 
                         numberOfLines={1}
                         style={styles.smallDesc}>{section.content}</Text>
+                        <Text style={styles.seeMore}>See more</Text>
                     </View>
                 }
           </Animatable.View>
@@ -91,22 +113,27 @@ export default class Loading extends React.Component {
     render() {
         return (
             <View style={[styles.scene]}>
+                
                 <ScrollView
                     style={styles.scrollView}
-                    contentContainerStyle={styles.accordionsWrapper}
                 >
                     <View style={styles.accordionsWrapper}>
-                        
                         <Accordion
-                            sections={CITIES}
+                            sections={this.state.cities}
                             activeSections={this.state.activeSections}
                             renderHeader={this._renderHeader}
                             renderContent={this._renderContent}
                             onChange={this._updateSections}
                             underlayColor="#FFF"
                         />
-                        
                     </View>
+                    <TouchableOpacity
+                        onPress={()=>{
+                            this.logout()
+                        }}
+                    >
+                        <Text style={styles.logout}>Logout</Text>
+                    </TouchableOpacity>
                 </ScrollView>
                 
                 
@@ -115,6 +142,27 @@ export default class Loading extends React.Component {
     }
 }
 const styles = StyleSheet.create({
+    logout:{
+        color: 'red',
+        marginRight: 8,
+        fontSize: 16,
+        fontWeight: "500",
+        marginVertical: 64,
+        alignSelf: 'center'
+    },
+    logoutBar: {
+        width: width,
+        height: 40,
+        backgroundColor: 'grey',
+        justifyContent: 'center',
+        alignItems: 'flex-end'
+    },
+    seeMore: {
+        alignSelf: 'center', 
+        marginTop: 4,
+        color: '#4169E1',
+        fontWeight: '600'
+    },
     fullContentView: {
         width: width*0.8,
         backgroundColor: '#B9CFEF',
@@ -143,17 +191,27 @@ const styles = StyleSheet.create({
     },
     smallDescContainer: {
         width: width*0.8,
-        height: height*0.05,
         backgroundColor: '#B9CFEF',
         borderBottomLeftRadius: 25,
         borderBottomRightRadius: 25,
-        padding: 8
+        padding: 8,
+        paddingVertical: 14
     },
     singleAccordion: {
         marginTop: 24
     },
     accordionsWrapper: {
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 7,
     },
     scrollView: {
         width: width,

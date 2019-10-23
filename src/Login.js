@@ -6,6 +6,8 @@ import DismissKeyboard from "./utils/DismissKeyboard"
 import LinearGradient from 'react-native-linear-gradient';
 import LogoBlack from "../assets/svgs/logo-black.svg"
 import DropdownAlert from 'react-native-dropdownalert';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+
 
 const { width, height } = Dimensions.get("window")
 export default class Login extends React.Component {
@@ -83,7 +85,7 @@ export default class Login extends React.Component {
                     <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0,0,0,0.0)"/>
                     <LinearGradient
                         colors={['rgb(73,85,221)', 'rgb(51,152,220)', 'rgb(20,212,215)']}
-                        style={{width: width, height: height}}
+                        style={{width: width, height: height + getStatusBarHeight()}}
                     />
                     <SafeAreaView style={styles.safeScreenContent}>
                         <View style={styles.logoWrap}>
