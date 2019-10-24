@@ -8,7 +8,7 @@ import LogoBlack from "../assets/svgs/logo-black.svg"
 import DropdownAlert from 'react-native-dropdownalert';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import AuthenticationContainer from "./utils/AuthenticationContainer"
-
+import TransparentTextInput from "./utils/TransparentTextInput"
 
 const { width, height } = Dimensions.get("window")
 export default class Login extends React.Component {
@@ -85,34 +85,21 @@ export default class Login extends React.Component {
                 <AuthenticationContainer>
                     <View style={{flex: 1, alignItems: 'center'}}>
 
-                    <View style={styles.textInputBackgroundWrap}>
-                        <TextInput
-                            style={styles.textInput}
-                            autoCapitalize="none"
-                            placeholder="Email"
-                            onChangeText={email => this.setState({ email })}
-                            value={this.state.email}
-                            placeholderTextColor="white"
-                            onBlur={()=>{this.handleVisibility()}}
-                            onSubmitEditing={()=>{this.handleVisibility()}}
-                        />
-                    </View>
-
-                    {this.state.showPasswordInput && 
-                        <View style={styles.textInputBackgroundWrap}>
-                            <TextInput
-                                secureTextEntry
-                                style={styles.textInput}
-                                autoCapitalize="none"
-                                placeholder="Password"
-                                onChangeText={password => this.setState({ password })}
-                                value={this.state.password}
-                                placeholderTextColor="white"
-                                onBlur={()=>{this.handleVisibility()}}
-                                onSubmitEditing={()=>{this.handleVisibility()}}
-                            />
-                        </View>
-                    }
+                    <TransparentTextInput 
+                        placeholder="Email"
+                        onChangeText={email => this.setState({ email })}
+                        value={this.state.email}
+                        handleVisibility={()=>{this.handleVisibility()}}
+                        visible
+                    />
+                    <TransparentTextInput 
+                        placeholder="Password"
+                        onChangeText={password => this.setState({ password })}
+                        value={this.state.password}
+                        handleVisibility={()=>{this.handleVisibility()}}
+                        visible={this.state.showPasswordInput}
+                        secureTextEntry
+                    />
 
                     {this.renderLoginButton()}
 
@@ -157,19 +144,6 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         bottom: 0
-    },
-    textInput: {
-        color: 'white',
-        padding: 12,
-        width: '100%',
-        height: 50,
-    },
-    textInputBackgroundWrap: { //prevents a bug from react-native
-        backgroundColor: 'rgba(255,255,255,0.3)',
-        width: '60%',
-        borderRadius: 5,
-        height: 50,
-        marginTop: 24
     },
     loginText: {
         fontSize: 16,
