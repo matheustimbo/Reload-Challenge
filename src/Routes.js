@@ -51,5 +51,5 @@ var navigator = createAnimatedSwitchNavigator(
   }
 );
 
-const App = createAppContainer(navigator)
-export default App
+const Routes = createAppContainer(navigator)
+export default Routes

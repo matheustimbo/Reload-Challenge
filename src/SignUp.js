@@ -7,6 +7,7 @@ import LogoBlack from "../assets/svgs/logo-black.svg"
 import DismissKeyboard from "./utils/DismissKeyboard"
 import DropdownAlert from 'react-native-dropdownalert';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import AuthenticationContainer from "./utils/AuthenticationContainer"
 
 const { width, height } = Dimensions.get("window")
 
@@ -103,92 +104,81 @@ export default class SignUp extends React.Component {
     render() {
         return (
             <DismissKeyboard>
-                <View style={{width: width, height: height}}>
-                    <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0,0,0,0.0)"/>
-                    <LinearGradient
-                        colors={['rgb(73,85,221)', 'rgb(51,152,220)', 'rgb(20,212,215)']}
-                        style={{width: width, height: height + getStatusBarHeight()}}
-                    />
-                    <SafeAreaView style={styles.safeScreenContent}>
-                        <View style={styles.logoWrap}>
-                            <LogoBlack height={100} width={200} fill="white"/>
+                <AuthenticationContainer>
+                    <View style={{flex: 1, alignItems: 'center'}}>
+                        <View style={styles.textInputBackgroundWrap}>
+                            <TextInput
+                                placeholder="Name"
+                                autoCapitalize="none"
+                                style={styles.textInput}
+                                onChangeText={name => this.setState({ name })}
+                                value={this.state.name}
+                                placeholderTextColor="white"
+                                onBlur={()=>{this.handleVisibility()}}
+                                onSubmitEditing={()=>{this.handleVisibility()}}
+                            />
                         </View>
-                        <View style={{flex: 1, alignItems: 'center'}}>
+                        {this.state.showEmailInput &&
                             <View style={styles.textInputBackgroundWrap}>
                                 <TextInput
-                                    placeholder="Name"
+                                    placeholder="Email"
                                     autoCapitalize="none"
                                     style={styles.textInput}
-                                    onChangeText={name => this.setState({ name })}
-                                    value={this.state.name}
+                                    onChangeText={email => this.setState({ email })}
+                                    value={this.state.email}
                                     placeholderTextColor="white"
                                     onBlur={()=>{this.handleVisibility()}}
                                     onSubmitEditing={()=>{this.handleVisibility()}}
                                 />
                             </View>
-                            {this.state.showEmailInput &&
-                                <View style={styles.textInputBackgroundWrap}>
-                                    <TextInput
-                                        placeholder="Email"
-                                        autoCapitalize="none"
-                                        style={styles.textInput}
-                                        onChangeText={email => this.setState({ email })}
-                                        value={this.state.email}
-                                        placeholderTextColor="white"
-                                        onBlur={()=>{this.handleVisibility()}}
-                                        onSubmitEditing={()=>{this.handleVisibility()}}
-                                    />
-                                </View>
-                            }
-                            
-                            {this.state.showPasswordInput &&
-                                <View style={styles.textInputBackgroundWrap}>
-                                    <TextInput
-                                        secureTextEntry
-                                        placeholder="Password"
-                                        autoCapitalize="none"
-                                        style={styles.textInput}
-                                        onChangeText={password => this.setState({ password })}
-                                        value={this.state.password}
-                                        placeholderTextColor="white"
-                                        onBlur={()=>{this.handleVisibility()}}
-                                        onSubmitEditing={()=>{this.handleVisibility()}}
-                                    />
-                                </View>
-                            }
-
-                            {this.state.showPasswordConfirmInput &&
-                                <View style={styles.textInputBackgroundWrap}>
-                                    <TextInput
-                                        secureTextEntry
-                                        placeholder="Password"
-                                        autoCapitalize="none"
-                                        style={styles.textInput}
-                                        onChangeText={passwordConfirmation => this.setState({ passwordConfirmation })}
-                                        value={this.state.passwordConfirmation}
-                                        placeholderTextColor="white"
-                                        onBlur={()=>{this.handleVisibility()}}
-                                        onSubmitEditing={()=>{this.handleVisibility()}}
-                                    />
-                                </View>
-                            }
-
-                            {this.renderSignInButton()}
-                            
-                            <View style={[styles.buttonWrap, styles.loginNavWrap]}>
-                                <TouchableOpacity
-                                    onPress={()=>{
-                                        this.props.navigation.navigate('Login')
-                                    }}
-                                >
-                                    <Text style={styles.loginText}>Already have an account? Login</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
+                        }
                         
-                    </SafeAreaView>
+                        {this.state.showPasswordInput &&
+                            <View style={styles.textInputBackgroundWrap}>
+                                <TextInput
+                                    secureTextEntry
+                                    placeholder="Password"
+                                    autoCapitalize="none"
+                                    style={styles.textInput}
+                                    onChangeText={password => this.setState({ password })}
+                                    value={this.state.password}
+                                    placeholderTextColor="white"
+                                    onBlur={()=>{this.handleVisibility()}}
+                                    onSubmitEditing={()=>{this.handleVisibility()}}
+                                />
+                            </View>
+                        }
+
+                        {this.state.showPasswordConfirmInput &&
+                            <View style={styles.textInputBackgroundWrap}>
+                                <TextInput
+                                    secureTextEntry
+                                    placeholder="Password"
+                                    autoCapitalize="none"
+                                    style={styles.textInput}
+                                    onChangeText={passwordConfirmation => this.setState({ passwordConfirmation })}
+                                    value={this.state.passwordConfirmation}
+                                    placeholderTextColor="white"
+                                    onBlur={()=>{this.handleVisibility()}}
+                                    onSubmitEditing={()=>{this.handleVisibility()}}
+                                />
+                            </View>
+                        }
+
+                        {this.renderSignInButton()}
+                        
+                        <View style={[styles.buttonWrap, styles.loginNavWrap]}>
+                            <TouchableOpacity
+                                onPress={()=>{
+                                    this.props.navigation.navigate('Login')
+                                }}
+                            >
+                                <Text style={styles.loginText}>Already have an account? Login</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                     <DropdownAlert ref={ref => this.dropDownAlertRef = ref} />
-                </View>
+                </AuthenticationContainer>
             </DismissKeyboard>
         
         )
@@ -243,7 +233,7 @@ const styles = StyleSheet.create({
     loginText: {
         color: 'white',
         fontWeight: 'bold',
-        marginBottom: 32,
+        marginBottom: 64,
         fontSize: 16
     },
     safeScreenContent: {

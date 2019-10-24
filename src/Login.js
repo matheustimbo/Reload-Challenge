@@ -7,6 +7,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import LogoBlack from "../assets/svgs/logo-black.svg"
 import DropdownAlert from 'react-native-dropdownalert';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
+import AuthenticationContainer from "./utils/AuthenticationContainer"
 
 
 const { width, height } = Dimensions.get("window")
@@ -81,63 +82,54 @@ export default class Login extends React.Component {
     render() {
         return (
             <DismissKeyboard>
-                <View style={{flex: 1}}>
-                    <StatusBar translucent barStyle="light-content" backgroundColor="rgba(0,0,0,0.0)"/>
-                    <LinearGradient
-                        colors={['rgb(73,85,221)', 'rgb(51,152,220)', 'rgb(20,212,215)']}
-                        style={{width: width, height: height + getStatusBarHeight()}}
-                    />
-                    <SafeAreaView style={styles.safeScreenContent}>
-                        <View style={styles.logoWrap}>
-                            <LogoBlack height={100} width={200} fill="white"/>
+                <AuthenticationContainer>
+                    <View style={{flex: 1, alignItems: 'center'}}>
+
+                    <View style={styles.textInputBackgroundWrap}>
+                        <TextInput
+                            style={styles.textInput}
+                            autoCapitalize="none"
+                            placeholder="Email"
+                            onChangeText={email => this.setState({ email })}
+                            value={this.state.email}
+                            placeholderTextColor="white"
+                            onBlur={()=>{this.handleVisibility()}}
+                            onSubmitEditing={()=>{this.handleVisibility()}}
+                        />
+                    </View>
+
+                    {this.state.showPasswordInput && 
+                        <View style={styles.textInputBackgroundWrap}>
+                            <TextInput
+                                secureTextEntry
+                                style={styles.textInput}
+                                autoCapitalize="none"
+                                placeholder="Password"
+                                onChangeText={password => this.setState({ password })}
+                                value={this.state.password}
+                                placeholderTextColor="white"
+                                onBlur={()=>{this.handleVisibility()}}
+                                onSubmitEditing={()=>{this.handleVisibility()}}
+                            />
                         </View>
-                        <View style={{flex: 1, alignItems: 'center'}}>
+                    }
 
-                            <View style={styles.textInputBackgroundWrap}>
-                                <TextInput
-                                    style={styles.textInput}
-                                    autoCapitalize="none"
-                                    placeholder="Email"
-                                    onChangeText={email => this.setState({ email })}
-                                    value={this.state.email}
-                                    placeholderTextColor="white"
-                                    onBlur={()=>{this.handleVisibility()}}
-                                    onSubmitEditing={()=>{this.handleVisibility()}}
-                                />
-                            </View>
+                    {this.renderLoginButton()}
 
-                            {this.state.showPasswordInput && 
-                                <View style={styles.textInputBackgroundWrap}>
-                                    <TextInput
-                                        secureTextEntry
-                                        style={styles.textInput}
-                                        autoCapitalize="none"
-                                        placeholder="Password"
-                                        onChangeText={password => this.setState({ password })}
-                                        value={this.state.password}
-                                        placeholderTextColor="white"
-                                        onBlur={()=>{this.handleVisibility()}}
-                                        onSubmitEditing={()=>{this.handleVisibility()}}
-                                    />
-                                </View>
-                            }
-                            
-                            {this.renderLoginButton()}
+                    <View style={[styles.buttonWrap, styles.signupNavWrap]}>
+                        <TouchableOpacity
+                            onPress={()=>{
+                                this.props.navigation.navigate('SignUp')
+                            }}
+                        >
+                            <Text style={styles.signupText}>Don't have an account? Sign Up</Text>
+                        </TouchableOpacity>
+                    </View>
+                    </View>
 
-                            <View style={[styles.buttonWrap, styles.signupNavWrap]}>
-                                <TouchableOpacity
-                                    onPress={()=>{
-                                        this.props.navigation.navigate('SignUp')
-                                    }}
-                                >
-                                    <Text style={styles.signupText}>Don't have an account? Sign Up</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                        
-                    </SafeAreaView>
                     <DropdownAlert ref={ref => this.dropDownAlertRef = ref} />
-                </View>
+                </AuthenticationContainer>
+                        
             </DismissKeyboard>
             
         )
@@ -147,7 +139,7 @@ const styles = StyleSheet.create({
     signupText: {
         color: 'white',
         fontWeight: 'bold',
-        marginBottom: 32,
+        marginBottom: 64,
         fontSize: 16
     },
     loginButtonText: {
